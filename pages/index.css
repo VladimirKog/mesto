@@ -13,12 +13,12 @@
 @import url(../blocks/content/content.css);
 
 @import url(../blocks/elements/elements.css);
-@import url(../blocks/elements/__group/element__group.css);
-@import url(../blocks/elements/__groups/element__groups.css);
-@import url(../blocks/elements/__image/element__image.css);
-@import url(../blocks/elements/__mask/element__mask.css);
-@import url(../blocks/elements/__text/element__text.css);
-@import url(../blocks/elements/__vector/element__vector.css);
+@import url(../blocks/elements/__group/elements__group.css);
+@import url(../blocks/elements/__groups/elements__groups.css);
+@import url(../blocks/elements/__image/elements__image.css);
+@import url(../blocks/elements/__mask/elements__mask.css);
+@import url(../blocks/elements/__text/elements__text.css);
+@import url(../blocks/elements/__vector/elements__vector.css);
 
 @import url(../blocks/input/input.css);
 
