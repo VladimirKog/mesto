@@ -16,8 +16,8 @@ modalCloseBtn.addEventListener('click', toggleModalWindow);
 
 
 let formElement = document.querySelector('.popup__form');
-let nameInput = document.querySelector('.popup_name');
-let jobInput = document.querySelector('.popup_job');
+let nameInput = document.querySelector('.popup__name');
+let jobInput = document.querySelector('.popup__job');
 let profileName = document.querySelector('.profile__title');
 let profileStatus = document.querySelector('.profile__subtitle');
 let modalSaveBtn = document.querySelector('.popup__save');
