@@ -1,0 +1,27 @@
+.popup__close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 32px;
+  height: 32px;
+  background-image: url(../../../images/Cros.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.popup__close:hover {
+  opacity: 60%;
+}
+
+@media screen and (max-width: 330px) {
+  .popup__close {
+    top: -36px;
+    right: 0;
+    width: 20px;
+    height: 20px;
+  }
+}

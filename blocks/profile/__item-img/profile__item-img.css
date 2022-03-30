@@ -1,0 +1,10 @@
+.profile__item-img {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 330px) {
+  .profile__item-img {
+    flex-direction: column;
+  }
+}

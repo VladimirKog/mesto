@@ -1,0 +1,14 @@
+.header {
+  margin: auto;
+  background-color: #000000;
+  color: #fff;
+  max-width: 68.75%;
+  border-bottom: 1px solid #545454;
+  padding-bottom: 41px;
+}
+
+@media screen and (max-width: 325px) {
+  .header {
+    max-width: 100%;
+}
+}

@@ -1,0 +1,49 @@
+@import url(../vendor/normalize.css);
+
+@import url(../script/script.js);
+
+@import url(../blocks/page/page.css);
+
+@import url(../vendor/font/fonts.css);
+
+@import url(../blocks/header/header.css);
+
+@import url(../blocks/logo/logo.css);
+
+@import url(../blocks/content/content.css);
+
+@import url(../blocks/elements/elements.css);
+@import url(../blocks/elements/__group/element__group.css);
+@import url(../blocks/elements/__groups/element__groups.css);
+@import url(../blocks/elements/__image/element__image.css);
+@import url(../blocks/elements/__mask/element__mask.css);
+@import url(../blocks/elements/__text/element__text.css);
+@import url(../blocks/elements/__vector/element__vector.css);
+
+@import url(../blocks/input/input.css);
+
+@import url(../blocks/profile/profile.css);
+@import url(../blocks/profile/__button-edit/profile__button-edit.css);
+@import url(../blocks/profile/__button-item-block/profile__button-item-block.css);
+@import url(../blocks/profile/__button-plus-block/profile__button-plus-block.css);
+@import url(../blocks/profile/__button-plus/profile__button-plus.css);
+@import url(../blocks/profile/__form/profile__form.css);
+@import url(../blocks/profile/__image/profile__image.css);
+@import url(../blocks/profile/__item/profile__item.css);
+@import url(../blocks/profile/__item-img/profile__item-img.css);
+@import url(../blocks/profile/__item-title/profile__item-title.css);
+@import url(../blocks/profile/__subtitle/profile__subtitle.css);
+@import url(../blocks/profile/__title/profile__title.css);
+
+@import url(../blocks/popup/popup.css);
+@import url(../blocks/popup/__activ/popup__activ.css);
+@import url(../blocks/popup/__close/popup__close.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__save/popup__save.css);
+@import url(../blocks/popup/__text/popup__text.css);
+@import url(../blocks/popup/__title/popup__title.css);
+@import url(../blocks/);
+@import url(../blocks/);
+
+@import url(../blocks/footer/footer.css);
+@import url(../blocks/footer/__text/footer__text.css);

@@ -1,0 +1,9 @@
+.element__group {
+  display: flex;
+  flex-direction: column;
+  max-width: 282px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  margin: 0;
+  list-style-type: none;
+}
