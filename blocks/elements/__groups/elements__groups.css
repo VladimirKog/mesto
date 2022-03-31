@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 550px) {
   .elements__groups {
     padding: 36px 0 0 0;
     grid-template-columns: repeat(1, minmax(282px, auto));

@@ -4,7 +4,7 @@
   padding-top: 45px;
 }
 
-@media screen and (max-width: 325px) {
+@media screen and (max-width: 550px) {
   .logo {
     height: 24px;
     width: 103px;

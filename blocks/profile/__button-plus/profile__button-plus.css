@@ -14,7 +14,7 @@
   opacity: 60%;
 }
 
-@media screen and (max-width: 330px) {
+@media screen and (max-width: 550px) {
   .profile__button-plus {
     width: 282px;
     padding: 0;
