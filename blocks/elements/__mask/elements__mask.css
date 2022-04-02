@@ -5,3 +5,9 @@
   flex-direction: row;
   justify-content: space-between;
 }
+
+@media screen and (max-width: 550px) {
+  .elements__mask {
+    padding: 25px 0 29px 0;
+  }
+}

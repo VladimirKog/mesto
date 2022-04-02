@@ -4,12 +4,13 @@
   color: #fff;
   max-width: 880px;
   border-bottom: 1px solid #545454;
-  padding-bottom: 41px;
+  padding-bottom: 36px;
   opacity: 0.7;
 }
 
 @media screen and (max-width: 550px) {
   .header {
     max-width: 100%;
+    padding-bottom: 29px;
 }
 }

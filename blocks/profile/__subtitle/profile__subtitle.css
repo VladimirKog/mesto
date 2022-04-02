@@ -7,7 +7,7 @@
   font-weight: 400;
   line-height: 22px;
   letter-spacing: 0em;
-  padding-top: 16px;
+  padding-top: 8px;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -18,7 +18,7 @@
   .profile__subtitle {
     font-size: 14px;
     line-height: 17px;
-    padding: 14px 0 36px 0;
+    padding: 10px 0 32px 0;
     margin: auto;
   }
 }

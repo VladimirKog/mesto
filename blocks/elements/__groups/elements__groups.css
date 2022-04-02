@@ -1,5 +1,5 @@
 .elements__groups {
-  padding: 51px 0 0 0;
+  padding: 46px 0 0 0;
   max-width: 880px;
   margin: auto;
   display: grid;
@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 900px) {
   .elements__groups {
-    padding: 36px 0 0 0;
+    padding: 35px 0 0 0;
     grid-template-columns: repeat(2, minmax(282px, auto));
     grid: 20px;
     justify-content: center;
