@@ -21,12 +21,12 @@
           <div class="profile__form">
             <div class="profile__item">
               <h1 class="profile__title">Жак-ИВ Кусто</h1>
-              <button class="profile__button-edit"></button>
+              <button type="button" class="profile__button-edit"></button>
             </div>
             <p class="profile__subtitle">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__button-plus"></button>
+        <button type="button" class="profile__button-plus"></button>
       </div>
     </section>
 
@@ -36,42 +36,42 @@
           <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="elements__image" />
           <div class="elements__mask">
             <p class="elements__text">Карачаевск</p>
-            <a href="#" class="elements__vector"></a>
+            <button type="button" class="elements__vector"></button>
           </div>
         </li>
         <li class="elements__group">
           <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="elements__image" />
           <div class="elements__mask">
             <p class="elements__text">Гора Эльбрус</p>
-            <a href="#" class="elements__vector"></a>
+            <button type="button" class="elements__vector"></button>
           </div>
         </li>
         <li class="elements__group">
           <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="elements__image" />
           <div class="elements__mask">
             <p class="elements__text">Домбай</p>
-            <a href="#" class="elements__vector"></a>
+            <button type="button" class="elements__vector"></button>
           </div>
         </li>
         <li class="elements__group">
           <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="elements__image" />
           <div class="elements__mask">
             <p class="elements__text">Гора Эльбрус</p>
-            <a href="#" class="elements__vector"></a>
+            <button type="button" class="elements__vector"></button>
           </div>
         </li>
         <li class="elements__group">
           <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="elements__image" />
           <div class="elements__mask">
             <p class="elements__text">Домбай</p>
-            <a href="#" class="elements__vector"></a>
+            <button type="button" class="elements__vector"></button>
           </div>
         </li>
         <li class="elements__group">
           <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкессия" class="elements__image" />
           <div class="elements__mask">
             <p class="elements__text">Карачаево-Черкессия</p>
-            <a href="#" class="elements__vector"></a>
+            <button type="button" class="elements__vector"></button>
           </div>
         </li>
 
@@ -86,11 +86,13 @@
 
   <div class="popup">
     <div class="popup__form">
-      <h4 class="popup__title">Редактировать профиль</h4>
-      <p class="popup__text"><input type="text" placeholder="Жак-ИВ Кусто" class="popup__name"></p>
-      <p class="popup__text"><input type="text" placeholder="Исследователь океана" class="popup__job"></p>
-      <button class="popup__save" type="button">Сохранить</button>
-      <button class="popup__close" type="button"></button>
+      <div class="popup__content">
+        <h4 class="popup__title">Редактировать профиль</h4>
+        <form class="popup__text"><input type="text" placeholder="Жак-ИВ Кусто" class="popup__name"></form>
+        <form class="popup__text"><input type="text" placeholder="Исследователь океана" class="popup__job"></form>
+        <button class="popup__save" type="button">Сохранить</button>
+        <button class="popup__close" type="button"></button>
+      </div>
     </div>
   </div>
 

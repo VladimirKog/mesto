@@ -1,10 +1,10 @@
 .profile {
   padding-top: 77px;
-  max-width: 68.75%;
+  max-width: 880px;
   margin: auto;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .profile {
     max-width: 100%;
     padding-top: 38px;

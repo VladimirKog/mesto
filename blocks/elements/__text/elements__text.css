@@ -1,5 +1,7 @@
 .elements__text {
+  max-width: 184px;
   margin: 0;
+  font-family: Inter;
   font-size: 24px;
   font-style: normal;
   font-weight: 900;

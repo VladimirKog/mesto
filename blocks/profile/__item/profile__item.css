@@ -1,20 +1,11 @@
 .profile__item {
   margin: 0;
   display: flex;
-  padding-left: 20px;
   flex-direction: row;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .profile__item {
-    padding: 0;
-    margin-left: 120px;
-  }
-}
-
-@media screen and (max-width: 330px) {
-  .profile__item {
-    padding: 0;
-    margin-left: 70px;
+    padding-left: 33px;
   }
 }

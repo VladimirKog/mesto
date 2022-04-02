@@ -8,11 +8,17 @@
   align-items: center;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 900px) {
   .elements__groups {
     padding: 36px 0 0 0;
-    grid-template-columns: repeat(1, minmax(282px, auto));
+    grid-template-columns: repeat(2, minmax(282px, auto));
     grid: 20px;
     justify-content: center;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .elements__groups {
+    grid-template-columns: repeat(1, minmax(282px, auto));
   }
 }

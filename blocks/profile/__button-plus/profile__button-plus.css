@@ -8,13 +8,14 @@
   background-position: center;
   background-repeat: no-repeat;
   cursor: pointer;
+  padding: 0;
 }
 
 .profile__button-plus:hover {
   opacity: 60%;
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 650px) {
   .profile__button-plus {
     width: 282px;
     padding: 0;

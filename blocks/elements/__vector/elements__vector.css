@@ -6,7 +6,10 @@
   background-image: url(../../../images/Vector.svg);
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #fff;
   align-items: center;
+  cursor: pointer;
+  border: none;
 }
 
 .elements__vector:hover {
