@@ -1,5 +1,21 @@
 .popup__content {
+  width: 100%;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 430px;
+  min-height: 330px;
   background: #fff;
   border-radius: 10px;
+  margin: 195px auto;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 550px) {
+  .popup__content {
+    max-width: 282px;
+    min-height: 322px;
+    margin: 123px auto;
+  }
 }

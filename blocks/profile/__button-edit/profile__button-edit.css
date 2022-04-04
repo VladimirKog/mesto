@@ -5,7 +5,8 @@
   border: 1px solid #ffffff;
   background-image: url(../../../images/Edit_Button.svg);
   background-color: #000000;
-  margin: auto auto;
+  background-position: center;
+  margin: auto;
   cursor: pointer;
 }
 
@@ -15,8 +16,6 @@
 
 @media screen and (max-width: 550px) {
   .profile__button-edit {
-    margin: auto 0;
-    padding-top: 14px;
     width: 18px;
     height: 18px;
   }

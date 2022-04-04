@@ -3,7 +3,7 @@
   background-color: #000000;
   color: #fff;
   max-width: 880px;
-  border-bottom: 1px solid #545454;
+  border-bottom: 1px solid rgba(84, 84, 84, 1);
   padding-bottom: 36px;
   opacity: 0.7;
 }
