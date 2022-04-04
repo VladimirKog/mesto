@@ -6,8 +6,8 @@ let profileName = document.querySelector(".profile__title");
 let profileStatus = document.querySelector(".profile__subtitle");
 
 let formElement = document.querySelector(".popup__form");
-let nameInput = document.querySelector(".popup_name");
-let jobInput = document.querySelector(".popup_job");
+let nameInput = document.querySelector(".popup__text_input-name");
+let jobInput = document.querySelector(".popup__text_input-job");
 
 function openWindow() {
   modalWindow.classList.add("popup_opened");
