@@ -8,6 +8,7 @@
   border: 2px solid rgba(255, 255, 255, 1);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: 22px 22px;
   cursor: pointer;
   padding: 0;
 }
@@ -16,7 +17,7 @@
   opacity: 60%;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 670px) {
   .profile__button-plus {
     width: 282px;
     padding: 0;

@@ -8,7 +8,6 @@
   min-height: 330px;
   background: #fff;
   border-radius: 10px;
-  margin: 75px auto;
   box-sizing: border-box;
 }
 
@@ -16,6 +15,5 @@
   .popup__content {
     max-width: 282px;
     min-height: 322px;
-    margin: 123px auto;
   }
 }

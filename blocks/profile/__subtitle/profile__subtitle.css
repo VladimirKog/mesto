@@ -1,6 +1,6 @@
 .profile__subtitle {
   margin: 0;
-  max-width: 336px;
+  max-width: 300px;
   font-family: 'Inter', 'Arial', 'sans-serif';
   font-size: 18px;
   font-style: normal;
@@ -20,5 +20,6 @@
     line-height: 17px;
     padding: 10px 0 32px 0;
     margin: auto;
+    max-width: 282px;
   }
 }

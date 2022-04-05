@@ -6,7 +6,10 @@
   background-image: url(../../../images/Edit_Button.svg);
   background-color: #000000;
   background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin: auto;
+  padding: 0;
   cursor: pointer;
 }
 
