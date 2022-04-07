@@ -8,7 +8,7 @@
   border: 2px solid rgba(255, 255, 255, 1);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 22px 22px;
+  background-size: 22px;
   cursor: pointer;
   padding: 0;
 }
@@ -19,6 +19,7 @@
 
 @media screen and (max-width: 670px) {
   .profile__button-plus {
+    background-size: 16px;
     width: 282px;
     padding: 0;
   }
