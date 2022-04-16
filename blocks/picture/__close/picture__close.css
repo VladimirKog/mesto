@@ -1,4 +1,4 @@
-.picture-big__close {
+.picture__close {
   position: absolute;
   top: -40px;
   right: -40px;
@@ -15,6 +15,6 @@
   transition: all 0.5s ease-in;
 }
 
-.picture-big__close:hover {
+.picture__close:hover {
   opacity: 60%;
 }

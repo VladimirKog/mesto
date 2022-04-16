@@ -1,7 +1,0 @@
-.picture-big__content {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  box-sizing: border-box;
-}

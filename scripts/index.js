@@ -37,19 +37,19 @@ const formElementCard = document.querySelector(".popup__form_card");
 
 const profileName = document.querySelector(".profile__title");
 const profileStatus = document.querySelector(".profile__subtitle");
-const nameInput = document.querySelector(".popup__text_type_name");
-const jobInput = document.querySelector(".popup__text_type_job");
-const modalWindow = document.querySelector(".popup__read");
-const modalImage = document.querySelector(".popup__picture-big");
+const nameInput = document.querySelector(".popup__text_type-name");
+const jobInput = document.querySelector(".popup__text_type-job");
+const modalWindow = document.querySelector(".popup_read");
+const modalImage = document.querySelector(".popup_picture");
 
-const modalNewWindow = document.querySelector(".popup__add");
+const modalNewWindow = document.querySelector(".popup_add");
 
-const nameNewInput = document.querySelector(".popup__new_type_name");
-const LinkNewInput = document.querySelector(".popup__new_type_job");
+const nameNewInput = document.querySelector(".popup__new_type-name");
+const LinkNewInput = document.querySelector(".popup__new_type-job");
 
-const bigCartImage = document.querySelector(".picture-big__content");
+const bigCartImage = document.querySelector(".picture__content");
 
-const modalCloseBtnImage = document.querySelector(".picture-big__close");
+const modalCloseBtnImage = document.querySelector(".picture__close");
 
 // вызов попапа для изменение шапки
 function openWindow() {
@@ -141,8 +141,8 @@ function elementBigImage(evt) {
   const element = evt.target.closest(".elements__group");
   const bigImage = element.querySelector(".elements__image");
   const bigTitle = element.querySelector(".elements__text");
-  const popupBigImage = bigCartImage.querySelector(".picture-big__image");
-  const popupText = bigCartImage.querySelector(".picture-big__text");
+  const popupBigImage = bigCartImage.querySelector(".picture__image");
+  const popupText = bigCartImage.querySelector(".picture__text");
 
   popupBigImage.src = bigImage.src;
   popupBigImage.alt = bigImage.alt;
