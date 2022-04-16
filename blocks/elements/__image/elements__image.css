@@ -1,6 +1,8 @@
 .elements__image {
   max-height: 282px;
+  min-height: 282px;
   object-fit: cover;
-  box-sizing: border-box;
+  box-sizing: content-box;
   border-radius: 10px 10px 0 0;
+  cursor: pointer;
 }

@@ -11,6 +11,7 @@
   margin: auto;
   padding: 0;
   cursor: pointer;
+  transition: all 0.5s ease-in;
 }
 
 .profile__button-edit:hover {

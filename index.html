@@ -30,49 +30,7 @@
 
     <section class="elements">
       <ul class="elements__groups">
-        <li class="elements__group">
-          <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="elements__image" />
-          <div class="elements__mask">
-            <h2 class="elements__text">Карачаевск</h2>
-            <button type="button" class="elements__vector"></button>
-          </div>
-        </li>
-        <li class="elements__group">
-          <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="elements__image" />
-          <div class="elements__mask">
-            <h2 class="elements__text">Гора Эльбрус</h2>
-            <button type="button" class="elements__vector"></button>
-          </div>
-        </li>
-        <li class="elements__group">
-          <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="elements__image" />
-          <div class="elements__mask">
-            <h2 class="elements__text">Домбай</h2>
-            <button type="button" class="elements__vector"></button>
-          </div>
-        </li>
-        <li class="elements__group">
-          <img src="./images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="elements__image" />
-          <div class="elements__mask">
-            <h2 class="elements__text">Гора Эльбрус</h2>
-            <button type="button" class="elements__vector"></button>
-          </div>
-        </li>
-        <li class="elements__group">
-          <img src="./images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="elements__image" />
-          <div class="elements__mask">
-            <h2 class="elements__text">Домбай</h2>
-            <button type="button" class="elements__vector"></button>
-          </div>
-        </li>
-        <li class="elements__group">
-          <img src="./images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаево-Черкессия" class="elements__image" />
-          <div class="elements__mask">
-            <h2 class="elements__text">Карачаево-Черкессия</h2>
-            <button type="button" class="elements__vector"></button>
-          </div>
-        </li>
-
+        
       </ul>
     </section>
 
@@ -82,7 +40,7 @@
     <p class="footer__text">&copy; 2020 Mesto Russia</p>
   </footer>
 
-  <div class="popup">
+  <div class="popup popup__read">
     <div class="popup__content">
       <h4 class="popup__title">Редактировать профиль</h4>
       <form class="popup__form">
@@ -90,9 +48,40 @@
         <input type="text" placeholder="Исследователь океана" class="popup__text popup__text_type_job">
         <button class="popup__save" type="submit">Сохранить</button>
       </form>
-      <button class="popup__close" type="button"></button>
+      <button class="popup__close popup__close_read" type="button"></button>
     </div>
   </div>
+
+  <div class="popup popup__add">
+    <div class="popup__content">
+      <h4 class="popup__title">Новое место</h4>
+      <form class="popup__form popup__form_card">
+        <input type="text" placeholder="Название" class="popup__text popup__new_type_name">
+        <input type="text" placeholder="Ссылка на картинку" class="popup__text popup__new_type_job">
+        <button class="popup__save" type="submit">Сохранить</button>
+      </form>
+      <button class="popup__close popup__close_new" type="button"></button>
+    </div>
+  </div>
+
+  <div class="popup popup__picture-big">
+    <div class="picture-big__content">
+      <img src=" " alt=" " class="picture-big__image"/>
+      <p class="picture-big__text"></p>
+      <button class="picture-big__close" type="button"></button>
+    </div>
+  </div>
+
+  <template class="template">
+    <li class="elements__group">
+      <img src=" " alt=" " class="elements__image"/>
+      <div class="elements__mask">
+        <h2 class="elements__text"></h2>
+        <button type="button" class="elements__vector"></button>
+      </div>
+      <button type="button" class="elements__delete"></button>
+    </li>
+  </template>
 
   <script src="./scripts/index.js"></script>
 </body>
