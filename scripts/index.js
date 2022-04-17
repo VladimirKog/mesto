@@ -44,12 +44,12 @@ const modalImage = document.querySelector(".popup_picture");
 
 const modalNewWindow = document.querySelector(".popup_add");
 
-const nameNewInput = document.querySelector(".popup__new_type-name");
-const LinkNewInput = document.querySelector(".popup__new_type-job");
+const nameNewInput = document.querySelector(".popup__text_type_new-name");
+const LinkNewInput = document.querySelector(".popup__text_type_new-job");
 
-const bigCartImage = document.querySelector(".picture__content");
+const bigCartImage = document.querySelector(".popup__picture");
 
-const modalCloseBtnImage = document.querySelector(".picture__close");
+const modalCloseBtnImage = document.querySelector(".popup__close-picture");
 
 // вызов попапа для изменение шапки
 function openWindow() {
@@ -141,8 +141,8 @@ function elementBigImage(evt) {
   const element = evt.target.closest(".elements__group");
   const bigImage = element.querySelector(".elements__image");
   const bigTitle = element.querySelector(".elements__text");
-  const popupBigImage = bigCartImage.querySelector(".picture__image");
-  const popupText = bigCartImage.querySelector(".picture__text");
+  const popupBigImage = bigCartImage.querySelector(".popup__image");
+  const popupText = bigCartImage.querySelector(".popup__title");
 
   popupBigImage.src = bigImage.src;
   popupBigImage.alt = bigImage.alt;
