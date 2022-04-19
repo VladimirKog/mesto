@@ -46,9 +46,9 @@ const modalNewWindow = document.querySelector(".popup_add");
 const nameNewInput = document.querySelector(".popup__text_type_new-name");
 const linkNewInput = document.querySelector(".popup__text_type_new-job");
 
-const bigCartImage = document.querySelector(".popup__picture");
-
 const modalCloseBtnImage = document.querySelector(".popup__close-picture");
+
+const popupText = document.querySelector(".popup__title-name");
 
 function openPopup(popup) {
   popup.classList.add('popup_opened');
@@ -95,14 +95,14 @@ function getElement(card) {
   link.alt = card.name;
 
   removeButton.addEventListener("click", removeElementButton);
-  noticeVector.addEventListener("click", submitElementsNotice);
+  noticeVector.addEventListener("click", likeCardElements);
   link.addEventListener("click", addElementImage);
 
   return newCard;
 }
 
 // выделение сердечка
-function submitElementsNotice(evt) {
+function likeCardElements(evt) {
   const element = evt.target.closest(".elements__group");
   const noticeVector = element.querySelector(".elements__vector");
   noticeVector.classList.toggle("elements__vector_notice");
@@ -117,15 +117,16 @@ function removeElementButton(evt) {
 // преобразование картинки в большую
 function addElementImage(evt) {
   const element = evt.target.closest(".elements__group");
-  const bigImage = element.querySelector(".elements__image");
-  const bigTitle = element.querySelector(".elements__text");
-  const popupBigImage = bigCartImage.querySelector(".popup__image");
-  const popupText = bigCartImage.querySelector(".popup__title");
-
-  popupBigImage.src = bigImage.src;
-  popupBigImage.alt = bigImage.alt;
-  popupText.textContent = bigTitle.textContent;
+  const BigImage = element.querySelector(".elements__image");
+  const popupBigImage = document.querySelector(".popup__image");
+  const popupText = document.querySelector(".popup__title-name");
+  popupBigImage.src = BigImage.src;
+  popupBigImage.alt = BigImage.alt;
+  popupText.textContent = BigImage.alt;
+  openPopup(modalImage);
 }
+
+modalCloseBtnImage.addEventListener("click", () => closePopup(modalImage));
 
 modalCloseNewBtn.addEventListener("click", () => closePopup(modalNewWindow));
 
