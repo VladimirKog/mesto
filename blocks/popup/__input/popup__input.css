@@ -1,4 +1,4 @@
-.popup__text {
+.popup__input {
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   border-top: none;
   border-left: none;
@@ -10,13 +10,13 @@
   margin: 0;
 }
 
-.popup__text:invalid {
+.popup__input:invalid {
   border-color: red;
   border-width: 1px;
 }
 
 @media screen and (max-width: 550px) {
-.popup__text {
+.popup__input {
   width: 238px;
   padding-top: 13px;
   padding-bottom: 8px;

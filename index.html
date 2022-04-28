@@ -44,11 +44,11 @@
     <div class="popup__content">
       <h4 class="popup__title">Редактировать профиль</h4>
       <form class="popup__form popup__form_read" novalidate>
-        <input type="text" placeholder="Имя" class="popup__text popup__text_type-name popup__text_input" id="name-input" required minlength="2" maxlength="40" name="name">
+        <input type="text" placeholder="Имя" class="popup__input popup__input_type-name popup__input_text" id="name-input" required minlength="2" maxlength="40" name="name">
         <span class="popup__error popup__error_visible" id="name-input-error"></span>
-        <input type="text" placeholder="Занятие" class="popup__text popup__text_type-job popup__text_input" id="job-input" required minlength="2" maxlength="200" name="name">
+        <input type="text" placeholder="Занятие" class="popup__input popup__input_type-job popup__input_text" id="job-input" required minlength="2" maxlength="200" name="name">
         <span class="popup__error popup__error_visible" id="job-input-error"></span>
-        <button class="button popup__button popup__save_valid-read" type="submit">Сохранить</button>
+        <button class="button popup__button popup__button_valid-read" type="submit">Сохранить</button>
       </form>
       <button class="popup__close popup__close_read" type="button"></button>
     </div>
@@ -58,11 +58,11 @@
     <div class="popup__content">
       <h4 class="popup__title">Новое место</h4>
       <form class="popup__form popup__form_card" novalidate>
-        <input type="text" placeholder="Название" class="popup__text popup__text_type_new-name popup__card_input" id="card-input" required minlength="2" maxlength="30" name="name">
+        <input type="text" placeholder="Название" class="popup__input popup__input_type_new-name popup__input_card" id="card-input" required minlength="2" maxlength="30" name="name">
         <span class="popup__error popup__error_visible" id="card-input-error"></span>
-        <input type="url" placeholder="Ссылка на картинку" class="popup__text popup__text_type_new-job popup__card_input" id="link-input" required name="link">
+        <input type="url" placeholder="Ссылка на картинку" class="popup__input popup__input_type_new-job popup__input_card" id="link-input" required name="link">
         <span class="popup__error popup__error_visible" id="link-input-error"></span>
-        <button class="button popup__button popup__save_valid-add" type="submit">Создать</button>
+        <button class="button popup__button popup__button_valid-add" type="submit">Создать</button>
       </form>
       <button class="popup__close popup__close_new" type="button"></button>
     </div>

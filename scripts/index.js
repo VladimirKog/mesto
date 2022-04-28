@@ -10,15 +10,15 @@ const formElementCard = document.querySelector(".popup__form_card");
 
 const profileName = document.querySelector(".profile__title");
 const profileStatus = document.querySelector(".profile__subtitle");
-const nameInput = document.querySelector(".popup__text_type-name");
-const jobInput = document.querySelector(".popup__text_type-job");
+const nameInput = document.querySelector(".popup__input_type-name");
+const jobInput = document.querySelector(".popup__input_type-job");
 const modalWindow = document.querySelector(".popup_read");
 const modalImage = document.querySelector(".popup_picture");
 
 const modalNewWindow = document.querySelector(".popup_add");
 
-const nameNewInput = document.querySelector(".popup__text_type_new-name");
-const linkNewInput = document.querySelector(".popup__text_type_new-job");
+const nameNewInput = document.querySelector(".popup__input_type_new-name"); 
+const linkNewInput = document.querySelector(".popup__input_type_new-job");
 
 const modalCloseBtnImage = document.querySelector(".popup__close-picture");
 

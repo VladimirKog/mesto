@@ -44,12 +44,12 @@ function handleFormInput(evt, form, config) {
 
 enableValidation({
   formSelector: ".popup__form_read",
-  inputSelector: ".popup__text_input",
-  buttonSelector: ".popup__save_valid-read",
+  inputSelector: ".popup__input_text",
+  buttonSelector: ".popup__button_valid-read",
 });
 
 enableValidation({
   formSelector: ".popup__form_card",
-  inputSelector: ".popup__card_input",
-  buttonSelector: ".popup__save_valid-add",
+  inputSelector: ".popup__input_card",
+  buttonSelector: ".popup__button_valid-add",
 });
