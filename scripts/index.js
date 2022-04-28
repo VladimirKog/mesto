@@ -1,29 +1,3 @@
-const initialCards = [
-  {
-    name: "Кошка",
-    link: "https://images.unsplash.com/photo-1647693283271-7335ab67e792?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDUxfEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-  },
-  {
-    name: "Медведь",
-    link: "https://images.unsplash.com/photo-1647717830879-a02636bd421f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQzfEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-  },
-  {
-    name: "Тигр",
-    link: "https://images.unsplash.com/photo-1599312545543-e7bbc16baea1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM1fEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-  },
-  {
-    name: "Сурикат",
-    link: "https://images.unsplash.com/photo-1599311979600-a629977414ff?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDM5fEpwZzZLaWRsLUhrfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
-  },
-  {
-    name: "Собака",
-    link: "https://images.unsplash.com/photo-1648307872501-9b4fdfc25034?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-  },
-  {
-    name: "Лев",
-    link: "https://images.unsplash.com/photo-1648807763220-703398bc459f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
-  },
-];
 
 const modalEditBtn = document.querySelector(".profile__button-edit");
 const modalPlusBtn = document.querySelector(".profile__button-plus");
@@ -51,19 +25,19 @@ const modalCloseBtnImage = document.querySelector(".popup__close-picture");
 const popupText = document.querySelector(".popup__title-name");
 
 function openPopup(popup) {
-  popup.classList.add('popup_opened');
-} 
+  popup.classList.add("popup_opened");
+}
 
 function closePopup(popup) {
-  popup.classList.remove('popup_opened');
-} 
+  popup.classList.remove("popup_opened");
+}
 
 modalEditBtn.addEventListener("click", () => openPopup(modalWindow));
 modalCloseBtn.addEventListener("click", () => closePopup(modalWindow));
 modalPlusBtn.addEventListener("click", () => openPopup(modalNewWindow));
 
- nameInput.value = profileName.textContent;
- jobInput.value = profileStatus.textContent;
+nameInput.value = profileName.textContent;
+jobInput.value = profileStatus.textContent;
 
 function submitProfileForm(evt) {
   evt.preventDefault();
@@ -76,6 +50,24 @@ formProfileElement.addEventListener("submit", submitProfileForm);
 
 const listCard = document.querySelector(".elements__groups");
 const templateCard = document.querySelector(".template");
+
+//закрытие окна через ESC
+document.addEventListener("keydown", function (evt) {
+  if (evt.key === "Escape") {
+    closePopup(modalWindow);
+    closePopup(modalNewWindow);
+    closePopup(modalImage);
+  }
+});
+
+//закрытие окна через overlay
+document.addEventListener("click", function (event) {
+  if (event.target.classList.contains("popup_opened")) {
+    closePopup(modalWindow);
+    closePopup(modalNewWindow);
+    closePopup(modalImage);
+  }
+});
 
 // создание карточек
 function render() {
@@ -117,12 +109,12 @@ function removeElementButton(evt) {
 // преобразование картинки в большую
 function addElementImage(evt) {
   const element = evt.target.closest(".elements__group");
-  const BigImage = element.querySelector(".elements__image");
+  const bigImage = element.querySelector(".elements__image");
   const popupBigImage = document.querySelector(".popup__image");
   const popupText = document.querySelector(".popup__title-name");
-  popupBigImage.src = BigImage.src;
-  popupBigImage.alt = BigImage.alt;
-  popupText.textContent = BigImage.alt;
+  popupBigImage.src = bigImage.src;
+  popupBigImage.alt = bigImage.alt;
+  popupText.textContent = bigImage.alt;
   openPopup(modalImage);
 }
 
@@ -139,9 +131,9 @@ function addCard(evt) {
   });
   listCard.prepend(elementCard);
   closePopup(modalNewWindow);
-  
-  nameNewInput.value ='';
-  linkNewInput.value ='';
+
+  nameNewInput.value = "";
+  linkNewInput.value = "";
 }
 
 formElementCard.addEventListener("submit", addCard);

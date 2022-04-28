@@ -1,4 +1,4 @@
-.popup__save {
+.popup__button {
   margin-top: 45px;
   margin-bottom: 14px;
   font-family: 'Inter', 'Arial', 'sans-serif';
@@ -18,12 +18,12 @@
   padding: 0;
 }
 
-.popup__save:hover {
+.popup__button:hover {
   opacity: 80%;
 }
 
 @media screen and (max-width: 550px) {
-  .popup__save {
+  .popup__button {
     margin-top: 47px;
     margin-bottom: 0;
     font-size: 14px;
