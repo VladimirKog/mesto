@@ -3,22 +3,21 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  padding-top: 13px;
-  padding-bottom: 13px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   width: 358px;
-  height: 20px;
+  height: 18px;
   margin: 0;
 }
 
 .popup__input:invalid {
   border-color: red;
-  border-width: 1px;
 }
 
 @media screen and (max-width: 550px) {
 .popup__input {
   width: 238px;
-  padding-top: 13px;
+  padding-top: 15px;
   padding-bottom: 8px;
 }
 }
