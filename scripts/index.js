@@ -26,12 +26,6 @@ const templateCard = document.querySelector(".template");
 
 const escClosed = "Escape";
 
-const formResetButton = formElementCard.querySelector(".popup__button_valid-card");
-
-// редактирование профайла
-nameInput.value = profileName.textContent;
-jobInput.value = profileStatus.textContent;
-
 function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener("keydown", handleEscClose);
@@ -41,8 +35,8 @@ function openPopup(popup) {
 function resetInput() {
   const formResetInput = formElementCard.querySelectorAll(".popup__input");
   Array.from(formResetInput).forEach((formResetInput) => {
-  formResetInput.removeAttribute('required');
-});
+    formResetInput.removeAttribute("required");
+  });
 }
 
 function closePopup(popupElement) {
@@ -53,7 +47,14 @@ function closePopup(popupElement) {
 //закрытие окна через ESC
 function handleEscClose(evt) {
   if (evt.key === escClosed) {
-  closePopup(document.querySelector(".popup_opened"));
+    closePopup(document.querySelector(".popup_opened"));
+  }
+}
+
+//закрытие окна через Overlay
+function handleOverlayClose(event) {
+  if (event.target.classList.contains("popup_opened")) {
+    closePopup(document.querySelector(".popup_opened"));
   }
 }
 
@@ -61,26 +62,26 @@ function submitProfileForm(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileStatus.textContent = jobInput.value;
-  closePopup(document.querySelector(".popup_opened"));
+  closePopup(modalWindow);
 }
 
 // создание карточек
 function renderCard() {
-  const html = initialCards.map(СreateСard);
+  const html = initialCards.map(createСard);
   listCard.append(...html);
 }
 
-function СreateСard(card) {
+function createСard(card) {
   const newCard = templateCard.content.cloneNode(true);
   const link = newCard.querySelector(".elements__image");
   const name = newCard.querySelector(".elements__text");
   const noticeVector = newCard.querySelector(".elements__vector");
   const removeButton = newCard.querySelector(".elements__delete");
-  
+
   name.textContent = card.name;
   link.src = card.link;
   link.alt = card.name;
-  
+
   removeButton.addEventListener("click", removeElementButton);
   noticeVector.addEventListener("click", likeCardElements);
   link.addEventListener("click", addElementImage);
@@ -116,38 +117,47 @@ function addElementImage(evt) {
 // Ввод текста в карточке
 formElementCard.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  const elementCard = СreateСard({
+  const elementCard = createСard({
     name: nameNewInput.value,
     link: linkNewInput.value,
   });
   listCard.prepend(elementCard);
   formElementCard.reset();
-  closePopup(document.querySelector(".popup_opened"));
+  closePopup(modalNewWindow);
 });
 
 renderCard();
 
-//закрытие окна через overlay
-document.addEventListener("click", function (event) {
-  if (event.target.classList.contains("popup_opened")) {
-     closePopup(document.querySelector(".popup_opened"));
-  }
+formProfileElement.addEventListener("submit", submitProfileForm);
+
+modalEditBtn.addEventListener("click", () => {
+  openPopup(modalWindow);
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileStatus.textContent;
 });
 
-formProfileElement.addEventListener("submit", submitProfileForm);
-modalEditBtn.addEventListener("click", () => openPopup(modalWindow));
-modalPlusBtn.addEventListener("click", function() { 
-  formResetButton.classList.add("button_disabled");
+modalWindow.addEventListener("click", (event) => {
+  handleOverlayClose(event);
+});
+
+modalNewWindow.addEventListener("click", (event) => {
+  handleOverlayClose(event);
+});
+
+modalImage.addEventListener("click", (event) => {
+  handleOverlayClose(event);
+});
+
+modalPlusBtn.addEventListener("click", () => {
   openPopup(modalNewWindow);
 });
 
-modalCloseBtn.addEventListener("click", function () {
+modalCloseBtn.addEventListener("click", () => {
   closePopup(modalWindow);
 });
-modalCloseNewBtn.addEventListener("click", function () {
-  formResetButton.classList.remove("button_disabled");
+modalCloseNewBtn.addEventListener("click", () => {
   closePopup(modalNewWindow);
 });
-modalCloseBtnImage.addEventListener("click", function () {
+modalCloseBtnImage.addEventListener("click", () => {
   closePopup(modalImage);
 });
