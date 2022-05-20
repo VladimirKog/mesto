@@ -10,11 +10,12 @@ function enableValidation(config) {
 
 function setEventListeners(form, config) {
   const inputs = form.querySelectorAll(config.inputSelector);
-  const buttonElement = document.querySelectorAll(config.submitButtonSelector);
+  const buttonElement = form.querySelector(config.submitButtonSelector);
   toggleButton(form, config, buttonElement);
   inputs.forEach((element) => {
     element.addEventListener("input", (evt) => {
       handleFormInput(evt, form, config);
+      toggleButton(form, config);
     });
   });
 }
