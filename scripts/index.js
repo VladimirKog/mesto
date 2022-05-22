@@ -1,5 +1,6 @@
-import { config } from "../utils.js";
-import Card from "./Card.js";
+import { config } from "./utils.js";
+import { Card } from "./Card.js";
+import { initialCards } from "./cards.js";
 import { FormValidator } from "./FormValidator.js";
 
 const modalEditBtn = document.querySelector(".profile__button-edit");
@@ -28,12 +29,18 @@ const popupText = document.querySelector(".popup__title-name");
 const popupBigImage = document.querySelector(".popup__image");
 const popupCloseButton = document.querySelector(".popup__close-picture");
 
-
 const profileValidate = new FormValidator(config, formProfileElement);
 const cardValidate = new FormValidator(config, formElementCard);
 
 profileValidate.enableValidation();
 cardValidate.enableValidation();
+
+initialCards.forEach((item) => {
+  const card = new Card(item.name, item.link);
+  const cardElement = card.getCard();
+  document.querySelector(".elements__groups").append(cardElement);
+});
+
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
