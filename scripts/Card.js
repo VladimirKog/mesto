@@ -1,4 +1,5 @@
-import { modalImage, popupText, popupBigImage } from "./index.js";
+import { modalImage, popupText, popupBigImage } from "./utils.js";
+import { openPopup } from "./index.js";
 
 export class Card {
   constructor(name, link, templateElement) {
@@ -37,8 +38,8 @@ export class Card {
     popupBigImage.src = this._link;
     popupBigImage.alt = this._name;
     popupText.textContent = this._name;
-    modalImage.classList.add("popup_opened");
-  }
+    openPopup(modalImage);
+ }
 
   _handleClickLike() {
     this._cardLike.classList.toggle("elements__vector_notice");
@@ -46,16 +47,13 @@ export class Card {
 
   _setEventListeners() {
     this._card
-      .querySelector(".elements__image")
-      .addEventListener("click", () => {
+      .querySelector(".elements__image").addEventListener("click", () => {
         this._handleOpenPopupImage(this._link, this._name);
       });
     this._card.addEventListener("click", () => {
       this._handleClickLike();
     });
-    this._card
-      .querySelector(".elements__delete")
-      .addEventListener("click", () => {
+    this._card.querySelector(".elements__delete").addEventListener("click", () => {
         this._handleCardDelete();
       });
   }

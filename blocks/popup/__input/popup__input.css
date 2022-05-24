@@ -10,10 +10,6 @@
   margin: 0;
 }
 
-.popup__input:invalid {
-  border-color: red;
-}
-
 @media screen and (max-width: 550px) {
 .popup__input {
   width: 238px;
