@@ -1,11 +1,11 @@
-import { modalImage, popupText, popupBigImage } from "./utils.js";
-import { openPopup } from "./index.js";
+import { PopupWithImage } from "./PopupWithImage.js";
+import { modalImage } from "./utils.js";
 
 export class Card {
-  constructor(name, link, templateElement) {
+  constructor(name, link) {
     this._name = name;
     this._link = link;
-    this._template = templateElement;
+    
   }
 
   _getTemplate() {
@@ -34,22 +34,20 @@ export class Card {
     this._card.remove();
   }
 
-  _handleOpenPopupImage() {
-    popupBigImage.src = this._link;
-    popupBigImage.alt = this._name;
-    popupText.textContent = this._name;
-    openPopup(modalImage);
- }
-
-  _handleClickLike() {
+   _handleClickLike() {
     this._cardLike.classList.toggle("elements__vector_notice");
   }
 
+  _handleOpenPopupImage() { 
+    const cardClick = new PopupWithImage(modalImage, this._link, this._name);
+    cardClick.open();
+    cardClick.setEventListeners();
+ }
+    
   _setEventListeners() {
-    this._card
-      .querySelector(".elements__image").addEventListener("click", () => {
-        this._handleOpenPopupImage(this._link, this._name);
-      });
+    this._card.querySelector(".elements__image").addEventListener("click", () => { 
+      this._handleOpenPopupImage(); 
+    }); 
     this._card.addEventListener("click", () => {
       this._handleClickLike();
     });

@@ -1,4 +1,4 @@
-.profile__button-plus {
+.profile__button-card {
   background-image: url(../../../images/Vector+.svg);
   width: 150px;
   height: 50px;
@@ -14,12 +14,12 @@
   transition: all 0.5s ease-in;
 }
 
-.profile__button-plus:hover {
+.profile__button-card:hover {
   opacity: 60%;
 }
 
 @media screen and (max-width: 670px) {
-  .profile__button-plus {
+  .profile__button-card {
     background-size: 16px;
     width: 282px;
     padding: 0;

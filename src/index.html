@@ -25,12 +25,12 @@
           <p class="profile__subtitle">Исследователь океана</p>
         </div>
       </div>
-      <button type="button" class="profile__button-plus"></button>
+      <button type="button" class="profile__button-card"></button>
     </section>
 
     <section class="elements">
       <ul class="elements__groups">
-        
+
       </ul>
     </section>
 
@@ -40,47 +40,49 @@
     <p class="footer__text">&copy; 2020 Mesto Russia</p>
   </footer>
 
-  <div class="popup popup_read">
+  <div class="popup popup_edit">
     <div class="popup__content">
       <h4 class="popup__title">Редактировать профиль</h4>
-      <form class="popup__form popup__form_read" novalidate>
-        <input type="text" placeholder="Имя" class="popup__input popup__input_type-name popup__input_text" 
-        id="name-input" required minlength="2" maxlength="40" name="name">
+      <form class="popup__form popup__form_edit" novalidate>
+        <input type="text" placeholder="Имя" class="popup__input popup__input_type-name popup__input_text"
+          id="name-input" required minlength="2" maxlength="40" name="name">
         <span class="popup__error" id="name-input-error"></span>
-        <input type="text" placeholder="Занятие" class="popup__input popup__input_type-job popup__input_text" 
-        id="job-input" required minlength="2" maxlength="200" name="name">
+        <input type="text" placeholder="Занятие" class="popup__input popup__input_type-job popup__input_text"
+          id="job-input" required minlength="2" maxlength="200" name="name">
         <span class="popup__error" id="job-input-error"></span>
-        <button class="button popup__button popup__button_read" type="submit">Сохранить</button>
+        <button class="button popup__button popup__button_edit" type="submit">Сохранить</button>
       </form>
-      <button class="popup__close popup__close_read" type="button"></button>
+      <button class="popup__close popup__close_edit" type="button"></button>
     </div>
   </div>
 
-  <div class="popup popup_add">
+  <div class="popup popup_card">
     <div class="popup__content">
       <h4 class="popup__title">Новое место</h4>
       <form class="popup__form popup__form_card" novalidate>
-        <input type="text" placeholder="Название" class="popup__input popup__input_type_new-name popup__input_card" id="card-input" required minlength="2" maxlength="30" name="name">
+        <input type="text" placeholder="Название" class="popup__input popup__input_type_new-name popup__input_card"
+          id="card-input" required minlength="2" maxlength="30" name="name">
         <span class="popup__error" id="card-input-error"></span>
-        <input type="url" placeholder="Ссылка на картинку" class="popup__input popup__input_type_new-job popup__input_card" id="link-input" required name="link">
+        <input type="url" placeholder="Ссылка на картинку"
+          class="popup__input popup__input_type_new-job popup__input_card" id="link-input" required name="link">
         <span class="popup__error" id="link-input-error"></span>
-        <button class="button popup__button popup__button_add" type="submit">Создать</button>
+        <button class="button popup__button popup__button_card" type="submit">Создать</button>
       </form>
-      <button class="popup__close popup__close_new" type="button"></button>
+      <button class="popup__close popup__close_card" type="button"></button>
     </div>
   </div>
 
   <div class="popup popup_picture">
     <div class="popup__picture">
-      <img src=" " alt=" " class="popup__image"/>
+      <img src=" " alt=" " class="popup__image" />
       <p class="popup__title-name"></p>
-      <button class="popup__close-picture" type="button"></button>
+      <button class="popup__close popup__close_image" type="button"></button>
     </div>
   </div>
 
   <template class="template">
     <li class="elements__group">
-      <img src=" " alt=" " class="elements__image"/>
+      <img src=" " alt=" " class="elements__image" />
       <div class="elements__mask">
         <h2 class="elements__text"></h2>
         <button type="button" class="elements__vector"></button>
@@ -90,7 +92,7 @@
   </template>
 
   <script src="./scripts/index.js" type="module"></script>
-   
+
 </body>
 
 </html>
