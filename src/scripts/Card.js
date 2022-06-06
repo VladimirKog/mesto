@@ -17,6 +17,7 @@ export class Card {
     return cardElement;
   }
 
+  
   getCard() {
     this._card = this._getTemplate();
     this._setEventListeners();
