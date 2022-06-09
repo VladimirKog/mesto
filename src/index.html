@@ -4,19 +4,18 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="./pages/index.css" />
   <title>Места России</title>
 </head>
 
 <body class="page">
   <header class="header">
-    <img src="./images/logo.svg" alt="Лого" class="logo" />
+    <img src="<%=require('./images/logo.svg')%>" alt="Лого" class="logo" />
   </header>
 
   <main class="content">
     <section class="profile">
       <div class="profile__item-img">
-        <img src="./images/image.jpg" alt="Жак-ИВ Кусто" class="profile__image" />
+        <img src="<%=require('./images/image.jpg')%>" alt="Жак-ИВ Кусто" class="profile__image" />
         <div class="profile__form">
           <div class="profile__item">
             <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -36,7 +35,6 @@
 
   </main>
 
-  
   <footer class="footer">
     <p class="footer__text">&copy; 2020 Mesto Russia</p>
   </footer>
@@ -91,8 +89,6 @@
       <button type="button" class="elements__delete"></button>
     </li>
   </template>
-
-  <script src="./scripts/index.js" type="module"></script>
 
 </body>
 
