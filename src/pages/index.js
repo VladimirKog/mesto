@@ -1,5 +1,7 @@
+import "../pages/index.css";
+
+import { config } from "../utils/utils.js";
 import {
-  config,
   formProfileElement,
   formElementCard,
   listCard,
@@ -7,24 +9,25 @@ import {
   modalCardWindow,
   modalEditBtn,
   modalPlusBtn,
+  modalAddBtn,
   nameInput,
   jobInput,
   nameNewInput,
-  linkNewInput
-} from "../components/utils.js";
+  linkNewInput,
+} from "../utils/constants.js";
+import { initialCards } from "../utils/cards.js";
+
 import { Section } from "../components/Section.js";
 import { Card } from "../components/Card.js";
-import { initialCards } from "../components/cards.js";
 import { FormValidator } from "../components/FormValidator.js";
 import { UserInfo } from "../components/UserInfo.js";
 import { PopupWithForm } from "../components/PopupWithForm.js";
-import "../pages/index.css";
 
 // Валидация
 const profileValidate = new FormValidator(config, formProfileElement);
-const cardValidate = new FormValidator(config, formElementCard);
-
 profileValidate.enableValidation();
+
+const cardValidate = new FormValidator(config, formElementCard);
 cardValidate.enableValidation();
 
 // отрисовка карточек
@@ -46,15 +49,18 @@ const userInfoRed = new UserInfo(nameInput, jobInput);
 userInfoRed.getUserInfo();
 
 // открытие попапа редакция формы
- const openPopupRead = new PopupWithForm(modalWindow, {
+const openPopupRead = new PopupWithForm(modalWindow, {
   handelFormSubmit: (input) => {
     userInfoRed.setUserInfo(input);
-  }
+  },
 });
 
 // открытие попапа добавления карточки
 const openPopupCard = new PopupWithForm(modalCardWindow, {
-  addFormCard
+  handelFormSubmit: () => {
+    nameNewInput.textContent = nameNewInput.value;
+    linkNewInput.textContent = linkNewInput.value;
+  },
 });
 
 // редакция формы
@@ -68,20 +74,27 @@ function addFormCard() {
   const card = new Card(nameNewInput.value, linkNewInput.value);
   const cardElement = card.getCard();
   cardListRend.addItem(cardElement);
-  openPopupCard.close();
 }
 
 formProfileElement.addEventListener("submit", submitProfileForm);
-formElementCard.addEventListener("submit", addFormCard);
+
+formElementCard.addEventListener("submit", () => {
+  addFormCard();
+  openPopupCard.close();
+  nameNewInput.value = "";
+  linkNewInput.value = "";
+});
+
+openPopupRead.setEventListeners();
+openPopupCard.setEventListeners();
 
 // слушатель на открытие формы редакции
 modalEditBtn.addEventListener("click", () => {
   openPopupRead.open();
-  openPopupRead.setEventListeners();
 });
 
 // слушатель на открытие формы добавление карточки
 modalPlusBtn.addEventListener("click", () => {
+  cardValidate.disableSubmitButton(modalAddBtn);
   openPopupCard.open();
-  openPopupCard.setEventListeners();
 });

@@ -1,11 +1,9 @@
 import { PopupWithImage } from "./PopupWithImage.js";
-import { modalImage } from "./utils.js";
 
 export class Card {
   constructor(name, link) {
     this._name = name;
     this._link = link;
-    
   }
 
   _getTemplate() {
@@ -17,7 +15,6 @@ export class Card {
     return cardElement;
   }
 
-  
   getCard() {
     this._card = this._getTemplate();
     this._setEventListeners();
@@ -35,24 +32,30 @@ export class Card {
     this._card.remove();
   }
 
-   _handleClickLike() {
+  _handleClickLike() {
     this._cardLike.classList.toggle("elements__vector_notice");
   }
 
-  _handleOpenPopupImage() { 
-    const cardClick = new PopupWithImage(modalImage, this._link, this._name);
-    cardClick.open();
+  _handleOpenPopupImage() {
+    const cardClick = new PopupWithImage(
+      document.querySelector(".popup_picture")
+    );
+    cardClick.open(this._name, this._link);
     cardClick.setEventListeners();
- }
-    
+  }
+
   _setEventListeners() {
-    this._card.querySelector(".elements__image").addEventListener("click", () => { 
-      this._handleOpenPopupImage(); 
-    }); 
+    this._card
+      .querySelector(".elements__image")
+      .addEventListener("click", () => {
+        this._handleOpenPopupImage();
+      });
     this._card.addEventListener("click", () => {
       this._handleClickLike();
     });
-    this._card.querySelector(".elements__delete").addEventListener("click", () => {
+    this._card
+      .querySelector(".elements__delete")
+      .addEventListener("click", () => {
         this._handleCardDelete();
       });
   }
